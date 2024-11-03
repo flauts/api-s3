@@ -10,8 +10,6 @@ def lambda_handler(event, context):
 
     # Crear el "directorio" dentro del bucket
     s3_client.put_object(Bucket=bucket_name, Key=folder_name)
-    print(f'Directorio "{folder_name}" creado en el bucket "{bucket_name}".')
     return {
-        'statusCode': 200,
-        'body': f'Directorio "{folder_name}" creado en el bucket "{bucket_name}".'
+        'statusCode': 200
     }

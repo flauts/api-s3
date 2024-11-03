@@ -8,8 +8,6 @@ def lambda_handler(event, context):
     s3_client = boto3.client('s3')
         # Crear el bucket
     s3_client.create_bucket(Bucket=bucket_name)
-    print(f'Bucket "{bucket_name}" creado exitosamente.')
     return {
-        'statusCode': 200,
-        'body': f'Bucket "{bucket_name}" creado exitosamente.'
+        'statusCode': 200
     }
